@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/fonts/common.css">
+    <link rel="stylesheet" href="./assets/fonts/animate.css">
+    <link rel="stylesheet" href="./assets/jQuery-ui/jquery-ui.min.css">
+    <script src="./assets/jQuery/jquery-2.1.4.min.js"></script>
+    <script src="./assets/jQuery/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/jQuery-ui/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="./themes/app_themes/style.css">
+    <link rel="stylesheet" href="./themes/respon/responsive.css">
+    <title>Máy tính</title>
+</head>
+
+<body>
+    <div class="wrapper page-home">
+
+        <div class="header">
+            <section class="top-link clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="nav navbar-nav topmenu-contact pull-left">
+                                <li><i class="fa fa-phone"></i> <span>Hotline:0238 385 5452</span></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right topmenu  hidden-xs hidden-sm">
+                                <li class="order-check"><a href="#"><i class="fas fa-pen-square"></i> Kiểm tra đơn hàng</a></li>
+                                <li class="order-cart"><a href="#"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
+                                <li class="account-login"><a href="./login.html"><i class="fa fa-sign-in-alt"></i> Đăng nhập </a></li>
+                                <li class="account-register"><a href="#"><i class="fa fa-key"></i> Đăng ký </a></li>
+                            </ul>
+                            <div class="show-mobile hidden-lg hidden-md">
+                                <div class="quick-user">
+                                    <div class="quickaccess-toggle">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                    <div class="inner-toggle">
+                                        <ul class="login links">
+                                            <li>
+                                                <a href="#"><i class="fa fa-sign-in"></i> Đăng ký</a>
+                                            </li>
+                                            <li>
+                                                <a href="/login.html"><i class="fa fa-key"></i> Đăng nhập</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="quick-access">
+                                    <div class="quickaccess-toggle">
+                                        <i class="fa fa-list"></i>
+                                    </div>
+                                    <div class="inner-toggle">
+                                        <ul class="links">
+                                            <li><a id="mobile-wishlist-total" href="#" class="wishlist"><i class="fa fa-pencil-square-o"></i> Kiểm tra đơn hàng</a></li>
+                                            <li><a href="#" class="shoppingcart"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="header-content clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-xs-12 col-sm-12 header-left text-center">
+                            <div class="logo">
+                                <a href="/" title="">
+                                    <img alt="HAH" src="./upload/images/logo.jpg" class="img-responsive">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-xs-12 col-sm-12 header-right">
+                            <div class="sale-policy clearfix hidden-sm hidden-xs">
+                                <ul class="clearfix">
+                                    <li class="shipping">
+                                        <i class="fa fa-truck"></i><span>
+                                        Giao hàng miễn phí
+                                    </span>
+                                    </li>
+                                    <li class="payment">
+                                        <i class="fa fa-money-bill-alt"></i><span>
+                                        Thanh toán linh hoạt
+                                    </span>
+                                    </li>
+                                    <li class="return">
+                                        <i class="fa fa-sync-alt"></i><span>
+                                        Trả hàng trong 30 ngày
+                                    </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8 col-sm-7 col-xs-12 top-search">
+                                    <div class="search-mobile hidden-md hidden-lg">
+                                        <div class="input-cat form-search clearfix">
+                                            <div class="form-search-controls  input-group">
+                                                <input type="text" name="search" id="txtsearch1" onblur="if(this.value=='')this.value='Tìm kiếm...'" onfocus="if(this.value=='Tìm kiếm...')this.value=''" value="Tìm kiếm...">
+                                                <span class="input-group-btn">
+                                                <button class="btn btn-search" title="Search" type="button" id="btnsearch1" value="Search">
+                                                    <i class="fa fa-search"></i>
+                                                </button>
+                                            </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="search hidden-sm hidden-xs">
+                                        <div class="input-cat form-search clearfix">
+                                            <div class="form-search-controls">
+                                                <input type="text" name="search" id="txtsearch" onblur="if(this.value=='')this.value='Tìm kiếm...'" onfocus="if(this.value=='Tìm kiếm...')this.value=''" value="Tìm kiếm...">
+                                                <div class="select-categories">
+                                                    <select name="lbgroup" id="lbgroup">
+                                                        <option value="0" selected="selected">Tất cả</option>
+                                                        <option class="option-1" value="1130">Case - Vỏ máy tính</option>
+                                                        <option class="option-1" value="1131">Máy để bàn &amp; Laptop</option>
+                                                        <option class="option-1" value="1132">Điện thoại</option>
+                                                        <option class="option-1" value="1133">Máy tính bảng</option>
+                                                        <option class="option-1" value="1134">Thời trang</option>
+                                                        <option class="option-1" value="1135">Hàng gia dụng</option>
+                                                </select>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-search" title="Search" type="button" id="btnsearch" value="Search">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-5 col-xs-12 top-cart">
+                                    <div class="cart">
+                                        <div class="heading">
+                                            <a href="#">
+                                                <span class="icon">icon</span><span id="cart-total">
+                                                0
+                                                sp - 0đ
+                                            </span><i class="fa fa-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <script type="text/javascript">
+                $("#btnsearch").click(function() {
+                    SearchProduct();
+                });
+                $("#txtsearch").keydown(function(event) {
+                    if (event.keyCode == 13) {
+                        SearchProduct();
+                    }
+                });
+                $("#btnsearch1").click(function() {
+                    SearchProduct1();
+                });
+                $("#txtsearch1").keydown(function(event) {
+                    if (event.keyCode == 13) {
+                        SearchProduct1();
+                    }
+                });
+
+                function SearchProduct() {
+                    var key = $('#txtsearch').val();
+                    if (key == '' || key == 'Tìm kiếm...') {
+                        $('#txtsearch').focus();
+                        return;
+                    }
+                    var group = $('#lbgroup').val();
+                    window.location = '/tim-kiem.html?group=' + group + '&key=' + key;
+                }
+
+                function SearchProduct1() {
+                    var key = $('#txtsearch1').val();
+                    if (key == '' || key == 'Tìm kiếm...') {
+                        $('#txtsearch1').focus();
+                        return;
+                    }
+                    var group = 0;
+                    window.location = '/tim-kiem.html?group=' + group + '&key=' + key;
+                }
+            </script>
+
+            <section class="navigation-menu clearfix">
+                <div class="container">
+                    <div class="menu-top">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="menu-cate menu-quick-select">
+                                    <div class="menu-cate-title">
+                                        <span><i class="fa fa-th-list"></i><a href="#">Danh mục sản phẩm</a></span>
+                                        <i class="fa fa-chevron-circle-down"></i>
+                                    </div>
+                                    <ul class="menu-cate-content">
+                                        <li>
+                                            <a href="#">
+                                                <i class="icon-menu fa"></i> Case - Vỏ máy tính<span class="arrow-menu"><i class="fa fa-chevron-right "></i></span>
+                                            </a>
+                                            <div class="sub-menu hidden-xs">
+                                                <ul class="colum0">
+                                                    <li>
+                                                        <a href="#">Vỏ Case theo hãng</a>
+                                                        <ul class="subview-menu">
+                                                            <li><a href="#">SAMA</a></li>
+                                                            <li><a href="#">ASUS</a></li>
+                                                            <li><a href="#">NZXT</a></li>
+                                                            <li><a href="#">INWIN</a></li>
+                                                            <li><a href="#">JETEX</a></li>
+                                                            <li><a href="#">VITRA</a></li>
+                                                            <li><a href="#">CORSAIR</a></li>
+                                                            <li><a href="#">SEGOTEP</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Kích thước Mainboard</a>
+                                                        <ul class="subview-menu">
+                                                            <li><a href="#">MINI ITX</a></li>
+                                                            <li><a href="#">MINI DTX</a></li>
+                                                            <li><a href="#">M-ATX</a></li>
+                                                            <li><a href="#">ATX</a></li>
+                                                            <li><a href="#">E-ATX</a></li>
+                                                            <li><a href="#">EEB</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <ul class="colum1">
+                                                    <li>
+                                                        <a href="#">Màu sắc</a>
+                                                    </li>
+                                                    <li>
+                                                        <ul class="subview-menu">
+                                                            <li><a href="#">Đen</a></li>
+                                                            <li><a href="#">Trắng</a></li>
+                                                            <li><a href="#">Đỏ</a></li>
+                                                            <li><a href="#">Xám</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="icon-menu fa"></i> Máy để bàn &amp; Laptop<span class="arrow-menu"><i class="fa fa-chevron-right "></i></span>
+                                            </a>
+                                            <div class="sub-menu hidden-xs">
+                                                <ul class="colum0">
+                                                    <li>
+                                                        <a href="#">Máy để bàn</a>
+                                                        <ul class="subview-menu">
+                                                            <li><a href="#">Máy tính HP</a></li>
+                                                            <li><a href="#">Máy tinh Dell</a></li>
+                                                            <li><a href="#">Máy tinh Lenovo</a></li>
+                                                            <li><a href="#">Máy tinh Acer</a></li>
+                                                            <li><a href="#">Máy tinh Asus</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Phụ kiện máy tính</a>
+                                                        <ul class="subview-menu">
+                                                            <li><a href="#">Túi xách</a></li>
+                                                            <li><a href="#">Ram</a></li>
+                                                            <li><a href="#">Pin &amp; Sạc</a></li>
+                                                            <li><a href="#">Bàn phím &amp; chuột</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <ul class="colum1">
+                                                    <li>
+                                                        <a href="#">Laptop</a>
+                                                        <ul class="subview-menu">
+                                                            <li><a href="#">Laptop Dell</a></li>
+                                                            <li><a href="#">Laptop Asus</a></li>
+                                                            <li><a href="#">Laptop Acer</a></li>
+                                                            <li><a href="#">Laptop Hp</a></li>
+                                                            <li><a href="#">Laptop Sony</a></li>
+                                                            <li><a href="#">Laptop Lenovo</a></li>
+                                                            <li><a href="#">Laptop Toshiba</a></li>
+                                                            <li><a href="#">Laptop Samsung</a></li>
+                                                            <li><a href="#">Laptop Apple</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="icon-menu fa "></i> Điện thoại<span class="arrow-menu"><i class="fa fa-chevron-right "></i></span>
+                                            </a>
+                                            <div class="sub-menu hidden-xs">
+                                                <ul class="colum0">
+                                                    <li>
+                                                        <a href="#">Điện thoại di động</a>
+                                                        <ul class="subview-menu">
+                                                            <li><a href="#">Điện thoại Samsung</a></li>
+                                                            <li><a href="#">Điện thoại Sony</a></li>
+                                                            <li><a href="#">Điện thoại IPhone</a></li>
+                                                            <li><a href="#">Điện thoại LG</a></li>
+                                                            <li><a href="#">Điện thoại Nokia</a></li>
+                                                            <li><a href="#">Điện thoại Asus</a></li>
+                                                            <li><a href="#">Điện thoại HTC</a></li>
+                                                            <li><a href="#">Điện thoại Lenovo</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Phụ kiện điện thoại</a>
+                                                        <ul class="subview-menu">
+                                                            <li><a href="#">Pin điện thoại</a></li>
+                                                            <li><a href="#">Sạc điện thoại</a></li>
+                                                            <li><a href="#">Bao da</a></li>
+                                                            <li><a href="#">Phụ kiện khác</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <ul class="colum1">
+                                                    <li>
+                                                        <a href="#">Điện thoại cố định</a>
+                                                        <ul class="subview-menu">
+                                                            <li><a href="#">Điện thoại Panasonic</a></li>
+                                                            <li><a href="#">Hãng khác</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="icon-menu fa"></i> Máy tính bảng<span class="arrow-menu"><i class="fa fa-chevron-right "></i></span>
+                                            </a>
+                                            <div class="sub-menu hidden-xs">
+                                                <ul class="colum0">
+                                                    <li>
+                                                        <a href="#">Theo hãng</a>
+                                                        <ul class="subview-menu">
+                                                            <li><a href="#">Tablet Apple</a></li>
+                                                            <li><a href="#">Tablet Samsung</a></li>
+                                                            <li><a href="#">Tablet Acer</a></li>
+                                                            <li><a href="#">Tablet Asus</a></li>
+                                                            <li><a href="#">Tablet Sony</a></li>
+                                                            <li><a href="#">Tablet Coby</a></li>
+                                                            <li><a href="#">Tablet MSI</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <ul class="colum1">
+                                                    <li>
+                                                        <a href="#">Phụ kiện Tablet</a>
+                                                        <ul class="subview-menu">
+                                                            <li><a href="#">Túi xách cho Tablet</a></li>
+                                                            <li><a href="#">Case, Ốp lưng</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="icon-menu fa"></i>Tai nghe<span class="arrow-menu"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="icon-menu fa"></i>CPU - Bộ vi xử lý<span class="arrow-menu"><i class="fa fa-chevron-right "></i></span>
+                                            </a>
+                                            <div class="sub-menu hidden-xs">
+                                                <ul class="colum0">
+                                                    <li>
+                                                        <a href="#">CPU Intel</a>
+                                                        <ul class="subview-menu">
+                                                            <li><a href="#">Intel i3</a></li>
+                                                            <li><a href="#">Intel i5</a></li>
+                                                            <li><a href="#">Intel i7</a></li>
+                                                            <li><a href="#">Intel i9</a></li>
+                                                            <li><a href="#">Intel xeon</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <ul class="colum1">
+                                                    <li>
+                                                        <a href="#">CPU ADM</a>
+                                                        <ul class="subview-menu">
+                                                            <li><a href="#">ADM Rezen 3</a></li>
+                                                            <li><a href="#">ADM Rezen 5</a></li>
+                                                            <li><a href="#">ADM Rezen 7</a></li>
+                                                            <li><a href="#">ADM Rezen 9</a></li>
+                                                            <li><a href="#">ADM Rezen Threadripper</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-9 ">
+                                <nav class="navbar nav-menu">
+                                    <div class="navbar-header">
+                                        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#mobile-menu" aria-controls="mobile-menu" aria-expanded="false">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                    </div>
+                                    <nav id="mobile-menu" class="mobile-menu collapse navbar-collapse">
+                                        <ul class="menu nav navbar-nav">
+                                            <li class="level0"><a class="" href="#"><span>Trang chủ</span></a></li>
+                                            <li class="level0"><a class="" href="#"><span>Giới thiệu</span></a></li>
+                                            <li class="level0"><a class="" href="#"><span>Sản phẩm</span></a></li>
+                                            <li class="level0"><a class="" href="#"><span>Tin tức</span></a></li>
+                                            <li class="level0"><a class="" href="#"><span>Liên hệ</span></a></li>
+                                            <li class="level0"><a class="" href="#"><span>Điểu khoản sử dụng</span></a></li>
+                                        </ul>
+                                    </nav>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    var str = location.href.toLowerCase();
+                    $("ul.menu li a").each(function() {
+                        if (str.indexOf(this.href.toLowerCase()) >= 0) {
+                            $("ul.menu li").removeClass("active");
+                            $(this).parent().addClass("active");
+                        }
+                    });
+                });
+            </script>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-9 ">
+                    <!--Begin-->
+                    <link href="./assets/flexSlider/flexslider.css" rel="stylesheet" type="text/css">
+                    <script src="./assets/flexSlider/jquery.flexslider-min.js" type="text/javascript"></script>
+                    <div class="flexslider slideshow-content ng-scope" id="bannerheaderhome" ng-controller="moduleController" ng-init="initSlideshowController('Slideshows')">
+
+                        <div class="flex-viewport" style="overflow: hidden; position: relative;">
+                            <ul class="slides" style="width: 1200%; transition-duration: 0.7s; transform: translate3d(-3432px, 0px, 0px);">
+                                <li ng-repeat="item in Slideshows" class="ng-scope clone" aria-hidden="true" style="width: 858px; float: left; display: block;">
+                                    <a title="654" href="">
+                                        <img alt="654" src="./upload/images/785x350dungthumayanh.jpg" data-original="./upload/images/785x350dungthumayanh.jpg" class="lazy" src="./upload/images/785x350dungthumayanh.jpg" draggable="false">
+                                    </a>
+                                </li>
+                                <!-- ngRepeat: item in Slideshows -->
+                                <li ng-repeat="item in Slideshows" class="ng-scope" style="width: 858px; float: left; display: block;">
+                                    <a title="#" href="null">
+                                        <img alt="#" src="./upload/images/761x309.png" data-original="./upload/images/761x309.png" class="lazy" src="./upload/images/761x309.png" draggable="false" style="display: block;">
+                                    </a>
+                                </li>
+                                <!-- end ngRepeat: item in Slideshows -->
+                                <li ng-repeat="item in Slideshows" class="ng-scope" style="width: 858px; float: left; display: block;">
+                                    <a title="#2" href="">
+                                        <img alt="#2" src="./upload/images/785x350 _ O1.jpg" data-original="./upload/images/785x350 _ O1.jpg" class="lazy" src="./upload/images/785x350 _ O1.jpg" draggable="false" style="display: block;">
+                                    </a>
+                                </li>
+                                <!-- end ngRepeat: item in Slideshows -->
+                                <li ng-repeat="item in Slideshows" class="ng-scope" style="width: 858px; float: left; display: block;">
+                                    <a title="65" href="">
+                                        <img alt="65" src="./upload/images/785x350fujifilm.jpg" data-original="./upload/images/785x350fujifilm.jpg" class="lazy" src="./upload/images/785x350fujifilm.jpg" draggable="false" style="display: block;">
+                                    </a>
+                                </li>
+                                <!-- end ngRepeat: item in Slideshows -->
+                                <li ng-repeat="item in Slideshows" class="ng-scope flex-active-slide" style="width: 858px; float: left; display: block;">
+                                    <a title="654" href="">
+                                        <img alt="654" src="./upload/images/785x350dungthumayanh.jpg" data-original="./upload/images/785x350dungthumayanh.jpg" class="lazy" src="./upload/images/785x350dungthumayanh.jpg" draggable="false" style="display: block;">
+                                    </a>
+                                </li>
+                                <!-- end ngRepeat: item in Slideshows -->
+                                <li ng-repeat="item in Slideshows" class="ng-scope clone" aria-hidden="true" style="width: 858px; float: left; display: block;">
+                                    <a title="#" href="null">
+                                        <img alt="#" src="./upload/images/761x309.png" data-original="./upload/images/761x309.png" class="lazy" src="./upload/images/761x309.png" draggable="false">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="flex-direction-nav">
+                            <li><a class="flex-prev" href="#">Previous</a></li>
+                            <li><a class="flex-next" href="#">Next</a></li>
+                        </ul>
+                    </div>
+                    <script type="text/javascript">
+                        $(document).ready(function() {
+                            $('#bannerheaderhome').flexslider({
+                                directionNav: true,
+                                controlNav: false,
+                                animation: "slide",
+                                itemHeigh: 270,
+                                itemMargin: 0,
+                                animationSpeed: 700,
+                                slideshowSpeed: 3000
+                            });
+                        });
+                    </script>
+                    <!--End-->
+                    <script type="text/javascript">
+                        window.Slideshows = [{
+                            "Id": 448,
+                            "ShopId": 90,
+                            "Name": "#",
+                            "Image": "/upload/images/761x309.png",
+                            "Link": "null",
+                            "Index": 1,
+                            "Inactive": false,
+                            "Timestamp": "AAAAAAAPo1o="
+                        }, {
+                            "Id": 449,
+                            "ShopId": 90,
+                            "Name": "#2",
+                            "Image": "/upload/images/785x350 _ O1.jpg",
+                            "Link": null,
+                            "Index": 2,
+                            "Inactive": false,
+                            "Timestamp": "AAAAAAAPo1k="
+                        }, {
+                            "Id": 450,
+                            "ShopId": 90,
+                            "Name": "65",
+                            "Image": "/upload/images/785x350fujifilm.jpg",
+                            "Link": null,
+                            "Index": 3,
+                            "Inactive": false,
+                            "Timestamp": "AAAAAAAPo1s="
+                        }, {
+                            "Id": 451,
+                            "ShopId": 90,
+                            "Name": "654",
+                            "Image": "/upload/images/785x350dungthumayanh.jpg",
+                            "Link": null,
+                            "Index": 4,
+                            "Inactive": false,
+                            "Timestamp": "AAAAAAAPo1g="
+                        }];
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <section class="product-content clearfix">
+                            <h1 class="title clearfix"><span>Sản phẩm</span></h1>
+                            <nav class="navbar navbar-default product-filter">
+                                <ul class="display">
+                                    <li id="grid" class="active grid"><a href="#" title="Grid"><i class="fa fa-th-large"></i></a></li>
+                                    <li id="list" class="list"><a href="#" title="List"><i class="fa fa-th-list"></i></a></li>
+                                </ul>
+                                <div class="limit">
+                                    <span>Sản phẩm/trang</span>
+                                    <select id="lblimit" name="lblimit" class="nb_item" onchange="window.location.href = this.options[this.selectedIndex].value">
+                                        <option value="?limit=10">10</option>
+                                        <option value="?limit=12">12</option>
+                                        <option value="?limit=20">20</option>
+                                        <option value="?limit=50">50</option>
+                                        <option value="?limit=100">100</option>
+                                        <option value="?limit=250">250</option>
+                                        <option value="?limit=500">500</option>
+                                    </select>
+                                </div>
+                                <div class="sort">
+                                    <span>Sắp xếp</span>
+                                    <select class="selectProductSort" id="lbsort" onchange="window.location.href = this.options[this.selectedIndex].value">
+                                        <option value="?sort=index&amp;order=asc">Mặc định</option>
+                                        <option value="?sort=price&amp;order=asc">Giá tăng dần</option>
+                                        <option value="?sort=price&amp;order=desc">Giá giảm dần</option>
+                                        <option value="?sort=name&amp;order=asc">Tên sản phẩm: A to Z</option>
+                                        <option value="?sort=name&amp;order=desc">Tên sản phẩm: Z to A</option>
+                                    </select>
+                                </div>
+                            </nav>
+                            <div class="product-block product-grid clearfix">
+                                <div class="col-md-2 col-sm-2 col-xs-6 product-resize product-item-box fixheight" style="height: 360px;">
+                                    <div class="product-item">
+                                        <div class="image image-resize" style="height: 199px;">
+                                            <a href="#" title="Asus TP550LA-CJ040H - Core i3 4030U / 15.6&quot; Touch / 4GB (Đen)">
+                                                <img src="./upload/images/asus-3505-372622-1-zoom.jpg" data-original="/upload/images/asus-3505-372622-1-zoom.jpg" alt="Asus TP550LA-CJ040H - Core i3 4030U / 15.6&quot; Touch / 4GB (Đen)" class="img-responsive lazy-img" style="display: inline-block;">
+                                            </a>
+                                            <span class="hot">Hot</span>
+                                        </div>
+                                        <div class="right-block">
+                                            <h2 class="name">
+                                                <a href="#" title="Asus TP550LA-CJ040H - Core i3 4030U / 15.6&quot; Touch / 4GB (Đen)">Asus TP550LA-CJ040H - Core i3 4030U / 15.6" Touch / 4GB (Đen)</a>
+                                            </h2>
+                                            <div class="rating">
+                                                <div class="rating-1">
+                                                    <span class="rating-img"></span>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="price-new">10.950.000&nbsp;₫</span>
+                                            </div>
+                                            <div class="button">
+                                                <a class="btn btn-default btn-add-cart" href="javascript:void(0)" onclick="AddToCard(639,1)">Mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6 product-resize product-item-box fixheight" style="height: 360px;">
+                                    <div class="product-item">
+                                        <div class="image image-resize" style="height: 199px;">
+                                            <a href="#" title="Asus P550LNVXO221D - Core i7-4510U 2.0GHz~3.1GHz / 15.6” / 4GB (Xám)">
+                                                <img src="./upload/images/asus-9116-098631-1-zoom.jpg" data-original="./upload/images/asus-9116-098631-1-zoom.jpg" alt="Asus P550LNVXO221D - Core i7-4510U 2.0GHz~3.1GHz / 15.6” / 4GB (Xám)" class="img-responsive lazy-img"
+                                                    style="display: inline-block;">
+                                            </a>
+                                            <span class="hot">Hot</span>
+                                        </div>
+                                        <div class="right-block">
+                                            <h2 class="name">
+                                                <a href="#" title="Asus P550LNVXO221D - Core i7-4510U 2.0GHz~3.1GHz / 15.6” / 4GB (Xám)">Asus P550LNVXO221D - Core i7-4510U 2.0GHz~3.1GHz / 15.6” / 4GB (Xám)</a>
+                                            </h2>
+                                            <div class="rating">
+                                                <div class="rating-1">
+                                                    <span class="rating-img"></span>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="price-new">15.490.000&nbsp;₫</span>
+                                            </div>
+                                            <div class="button">
+                                                <a class="btn btn-default btn-add-cart" href="javascript:void(0)" onclick="AddToCard(638,1)">Mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6 product-resize product-item-box fixheight" style="height: 360px;">
+                                    <div class="product-item">
+                                        <div class="image image-resize" style="height: 199px;">
+                                            <a href="#" title="Dell Inspiron One 2350 MONS1405368 - Core i3-4000M 2.4GHz / 23” Full HD / 8GB / 1TB (Bạc)">
+                                                <img src="./upload/images/dell-7270-242341-1-zoom.jpg" data-original="./upload/images/dell-7270-242341-1-zoom.jpg" alt="Dell Inspiron One 2350 MONS1405368 - Core i3-4000M 2.4GHz / 23” Full HD / 8GB / 1TB (Bạc)" class="img-responsive lazy-img"
+                                                    style="display: inline-block;">
+                                            </a>
+                                            <span class="hot">Hot</span>
+                                        </div>
+                                        <div class="right-block">
+                                            <h2 class="name">
+                                                <a href="#" title="Dell Inspiron One 2350 MONS1405368 - Core i3-4000M 2.4GHz / 23” Full HD / 8GB / 1TB (Bạc)">Dell Inspiron One 2350 MONS1405368 - Core i3-4000M 2.4GHz / 23” Full HD / 8GB / 1TB (Bạc)</a>
+                                            </h2>
+                                            <div class="rating">
+                                                <div class="rating-1">
+                                                    <span class="rating-img"></span>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="price-new">23.900.000&nbsp;₫</span>
+                                            </div>
+                                            <div class="button">
+                                                <a class="btn btn-default btn-add-cart" href="javascript:void(0)" onclick="AddToCard(624,1)">Mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6 product-resize product-item-box fixheight" style="height: 360px;">
+                                    <div class="product-item">
+                                        <div class="image image-resize" style="height: 199px;">
+                                            <a href="#" title="Laptop Asus S530FA-BQ066T Core i5-8265U Vàng">
+                                                <img src="./upload/images/resize_326507_laptop_asus_s530fa-bq066t__i5-8265u4gb1tb15_2.jpg" data-original="./upload/images/resize_326507_laptop_asus_s530fa-bq066t__i5-8265u4gb1tb15_2.jpg" alt="Laptop Asus S530FA-BQ066T Core i5-8265U Vàng" class="img-responsive lazy-img"
+                                                    style="display: inline-block;">
+                                            </a>
+                                            <span class="hot">Hot</span>
+                                        </div>
+                                        <div class="right-block">
+                                            <h2 class="name">
+                                                <a href="#" title="Laptop Asus S530FA-BQ066T Core i5-8265U Vàng">Laptop Asus S530FA-BQ066T Core i5-8265U Vàng</a>
+                                            </h2>
+                                            <div class="rating">
+                                                <div class="rating-1">
+                                                    <span class="rating-img"></span>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="price-new">11.658.000&nbsp;₫</span>
+                                            </div>
+                                            <div class="button">
+                                                <a class="btn btn-default btn-add-cart" href="javascript:void(0)" onclick="AddToCard(619,1)">Mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6 product-resize product-item-box fixheight" style="height: 360px;">
+                                    <div class="product-item">
+                                        <div class="image image-resize" style="height: 199px;">
+                                            <a href="#" title="Màn hình ACER KA272 27 IPS 75Hz">
+                                                <img src="./upload/images/acer_ka272_gearvn_066b9835519e489b991e2f99e2ec1e4e.jpg" data-original="./upload/images/acer_ka272_gearvn_066b9835519e489b991e2f99e2ec1e4e.jpg" alt="Màn hình ACER KA272 27 IPS 75Hz" class="img-responsive lazy-img" style="display: inline-block;">
+                                            </a>
+                                            <span class="hot">Hot</span>
+                                        </div>
+                                        <div class="right-block">
+                                            <h2 class="name">
+                                                <a href="#" title="Màn hình ACER KA272 27 IPS 75Hz">Màn hình ACER KA272 27 IPS 75Hz</a>
+                                            </h2>
+                                            <div class="rating">
+                                                <div class="rating-1">
+                                                    <span class="rating-img"></span>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="price-new">4.499.000&nbsp;₫</span>
+                                            </div>
+                                            <div class="button">
+                                                <a class="btn btn-default btn-add-cart" href="javascript:void(0)" onclick="AddToCard(617,1)">Mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6 product-resize product-item-box fixheight" style="height: 360px;">
+                                    <div class="product-item">
+                                        <div class="image image-resize" style="height: 199px;">
+                                            <a href="#" title="Màn hình ViewSonic VA2215-H 22 75Hz FHD">
+                                                <img src="./upload/images/viewsonic_va2215-h_gearvn_032d5d53effc48a2887c2879e6bc5cff.jpg" data-original="./upload/images/viewsonic_va2215-h_gearvn_032d5d53effc48a2887c2879e6bc5cff.jpg" alt="Màn hình ViewSonic VA2215-H 22 75Hz FHD" class="img-responsive lazy-img" style="display: inline-block;">
+                                            </a>
+                                            <span class="hot">Hot</span>
+                                        </div>
+                                        <div class="right-block">
+                                            <h2 class="name">
+                                                <a href="#" title="Màn hình ViewSonic VA2215-H 22 75Hz FHD">Màn hình ViewSonic VA2215-H 22 75Hz FHD</a>
+                                            </h2>
+                                            <div class="rating">
+                                                <div class="rating-1">
+                                                    <span class="rating-img"></span>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="price-new">3.699.000&nbsp;₫</span>
+                                            </div>
+                                            <div class="button">
+                                                <a class="btn btn-default btn-add-cart" href="javascript:void(0)" onclick="AddToCard(616,1)">Mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6 product-resize product-item-box fixheight" style="height: 360px;">
+                                    <div class="product-item">
+                                        <div class="image image-resize" style="height: 199px;">
+                                            <a href="#" title="GVN Mystic M">
+                                                <img src="./upload/images/mystic_ef8b8848352f4472810f7a9f0f4f7623.jpg" data-original="./upload/images/mystic_ef8b8848352f4472810f7a9f0f4f7623.jpg" alt="GVN Mystic M" class="img-responsive lazy-img" style="display: inline-block;">
+                                            </a>
+                                            <span class="promotion">-10%</span>
+                                        </div>
+                                        <div class="right-block">
+                                            <h2 class="name">
+                                                <a href="#" title="GVN Mystic M">GVN Mystic M</a>
+                                            </h2>
+                                            <div class="rating">
+                                                <div class="rating-1">
+                                                    <span class="rating-img"></span>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="price-new">12.990.000&nbsp;₫</span>
+                                                <span class="price-old">13.990.000&nbsp;₫</span>
+                                            </div>
+                                            <div class="button">
+                                                <a class="btn btn-default btn-add-cart" href="javascript:void(0)" onclick="AddToCard(615,1)">Mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6 product-resize product-item-box fixheight" style="height: 360px;">
+                                    <div class="product-item">
+                                        <div class="image image-resize" style="height: 199px;">
+                                            <a href="#" title="GVN Garen S">
+                                                <img src="./upload/images/garen_df058ace6fe7447b91b0ba55a7ef0c3c.jpg" data-original="./upload/images/garen_df058ace6fe7447b91b0ba55a7ef0c3c.jpg" alt="GVN Garen S" class="img-responsive lazy-img" style="display: inline-block;">
+                                            </a>
+                                            <span class="promotion">-10%</span>
+                                        </div>
+                                        <div class="right-block">
+                                            <h2 class="name">
+                                                <a href="#" title="GVN Garen S">GVN Garen S</a>
+                                            </h2>
+                                            <div class="rating">
+                                                <div class="rating-1">
+                                                    <span class="rating-img"></span>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="price-new">45.990.000&nbsp;₫</span>
+                                                <span class="price-old">47.410.000&nbsp;₫</span>
+                                            </div>
+                                            <div class="button">
+                                                <a class="btn btn-default btn-add-cart" href="javascript:void(0)" onclick="AddToCard(614,1)">Mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6 product-resize product-item-box fixheight" style="height: 360px;">
+                                    <div class="product-item">
+                                        <div class="image image-resize" style="height: 199px;">
+                                            <a href="#" title="Laptop Gaming Asus ROG Strix G15 G513IH HN015T">
+                                                <img src="./upload/images/rog_strix_g15_g513ih_hn015t_9e61847a6b8245e9ab9fa32cc2ffb6ba.png" data-original="./upload/images/rog_strix_g15_g513ih_hn015t_9e61847a6b8245e9ab9fa32cc2ffb6ba.png" alt="Laptop Gaming Asus ROG Strix G15 G513IH HN015T" class="img-responsive lazy-img" style="display: inline-block;">
+                                            </a>
+                                            <span class="promotion">-10%</span>
+                                        </div>
+                                        <div class="right-block">
+                                            <h2 class="name">
+                                                <a href="#" title="Laptop Gaming Asus ROG Strix G15 G513IH HN015T">Laptop Gaming Asus ROG Strix G15 G513IH HN015T</a>
+                                            </h2>
+                                            <div class="rating">
+                                                <div class="rating-1">
+                                                    <span class="rating-img"></span>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="price-new">22.490.000&nbsp;₫</span>
+                                                <span class="price-old">23.490.000&nbsp;₫</span>
+                                            </div>
+                                            <div class="button">
+                                                <a class="btn btn-default btn-add-cart" href="javascript:void(0)" onclick="AddToCard(613,1)">Mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6 product-resize product-item-box fixheight" style="height: 360px;">
+                                    <div class="product-item">
+                                        <div class="image image-resize" style="height: 199px;">
+                                            <a href="#" title="Laptop Gaming MSI Katana GF66 11UC 676VN">
+                                                <img src="./upload/images/msi_katana_gf66_gearvn_fa5506cee51349d88502a0e1e8a1fa58.jpg" data-original="./upload/images/msi_katana_gf66_gearvn_fa5506cee51349d88502a0e1e8a1fa58.jpg" alt="Laptop Gaming MSI Katana GF66 11UC 676VN" class="img-responsive lazy-img" style="display: inline-block;">
+                                            </a>
+                                            <span class="hot">Hot</span>
+                                        </div>
+                                        <div class="right-block">
+                                            <h2 class="name">
+                                                <a href="#" title="Laptop Gaming MSI Katana GF66 11UC 676VN">Laptop Gaming MSI Katana GF66 11UC 676VN</a>
+                                            </h2>
+                                            <div class="rating">
+                                                <div class="rating-1">
+                                                    <span class="rating-img"></span>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="price-new">24.390.000&nbsp;₫</span>
+                                                <span class="price-old">25.990.000&nbsp;₫</span>
+                                            </div>
+                                            <div class="button">
+                                                <a class="btn btn-default btn-add-cart" href="javascript:void(0)" onclick="AddToCard(602,1)">Mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6 product-resize product-item-box fixheight" style="height: 360px;">
+                                    <div class="product-item">
+                                        <div class="image image-resize" style="height: 199px;">
+                                            <a href="#" title="Màn hình ViewSonic VP2458 24 IPS chuyên đồ họa">
+                                                <img src="./upload/images/1_43c9773c518242568cbeadd860151b73.jpg" data-original="./upload/images/1_43c9773c518242568cbeadd860151b73.jpg" alt="Màn hình ViewSonic VP2458 24 IPS chuyên đồ họa" class="img-responsive lazy-img" style="display: inline-block;">
+                                            </a>
+                                        </div>
+                                        <div class="right-block">
+                                            <h2 class="name">
+                                                <a href="#" title="Màn hình ViewSonic VP2458 24 IPS chuyên đồ họa">Màn hình ViewSonic VP2458 24 IPS chuyên đồ họa</a>
+                                            </h2>
+                                            <div class="rating">
+                                                <div class="rating-1">
+                                                    <span class="rating-img"></span>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="price-new">5.450.000&nbsp;₫</span>
+                                                <span class="price-old">6.250.000&nbsp;₫</span>
+                                            </div>
+                                            <div class="button">
+                                                <a class="btn btn-default btn-add-cart" href="javascript:void(0)" onclick="AddToCard(600,1)">Mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6 product-resize product-item-box fixheight" style="height: 360px;">
+                                    <div class="product-item">
+                                        <div class="image image-resize" style="height: 199px;">
+                                            <a href="#" title="GVN Athen M">
+                                                <img src="./upload/images/athen_7e46a2f0442c4abb80e75fc69612e680.jpg" data-original="./upload/images/athen_7e46a2f0442c4abb80e75fc69612e680.jpg" alt="GVN Athen M" class="img-responsive lazy-img" style="display: inline-block;">
+                                            </a>
+                                            <span class="promotion">-10%</span>
+                                        </div>
+                                        <div class="right-block">
+                                            <h2 class="name">
+                                                <a href="#" title="GVN Athen M">GVN Athen M</a>
+                                            </h2>
+                                            <div class="rating">
+                                                <div class="rating-1">
+                                                    <span class="rating-img"></span>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="price-new">20.390.000&nbsp;₫</span>
+                                                <span class="price-old">21.220.000&nbsp;₫</span>
+                                            </div>
+                                            <div class="button">
+                                                <a class="btn btn-default btn-add-cart" href="javascript:void(0)" onclick="AddToCard(593,1)">Mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6 product-resize product-item-box fixheight" style="height: 360px;">
+                                    <div class="product-item">
+                                        <div class="image image-resize" style="height: 199px;">
+                                            <a href="#" title="Vỏ case SEGOTEP MEX RGB (No Fan)">
+                                                <img src="./upload/images/cmastercooler.jpg" data-original="./upload/images/cmastercooler.jpg" alt="Vỏ case SEGOTEP MEX RGB (No Fan)" class="img-responsive lazy-img" style="display: inline-block;">
+                                            </a>
+                                            <span class="promotion">-10%</span>
+                                        </div>
+                                        <div class="right-block">
+                                            <h2 class="name">
+                                                <a href="#" title="Vỏ case SEGOTEP MEX RGB (No Fan)">Vỏ case SEGOTEP MEX RGB (No Fan)</a>
+                                            </h2>
+                                            <div class="rating">
+                                                <div class="rating-1">
+                                                    <span class="rating-img"></span>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="price-new">690.000&nbsp;₫</span>
+                                                <span class="price-old">780.000&nbsp;₫</span>
+                                            </div>
+                                            <div class="button">
+                                                <a class="btn btn-default btn-add-cart" href="javascript:void(0)" onclick="AddToCard(591,1)">Mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6 product-resize product-item-box fixheight" style="height: 360px;">
+                                    <div class="product-item">
+                                        <div class="image image-resize" style="height: 199px;">
+                                            <a href="#" title="Vỏ case Xigmatek Eros EN43361 (No Fan)">
+                                                <img src="./upload/images/568f7c7205dd05adaf07cea95cecdd43.jpg" data-original="./upload/images/568f7c7205dd05adaf07cea95cecdd43.jpg" alt="Vỏ case Xigmatek Eros EN43361 (No Fan)"
+                                                    class="img-responsive lazy-img" style="display: inline-block;">
+                                            </a>
+                                            <span class="promotion">-10%</span>
+                                        </div>
+                                        <div class="right-block">
+                                            <h2 class="name">
+                                                <a href="#" title="Vỏ case Xigmatek Eros EN43361 (No Fan)">Vỏ case Xigmatek Eros EN43361 (No Fan)</a>
+                                            </h2>
+                                            <div class="rating">
+                                                <div class="rating-1">
+                                                    <span class="rating-img"></span>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="price-new">4.410.000&nbsp;₫</span>
+                                                <span class="price-old">4.900.000&nbsp;₫</span>
+                                            </div>
+                                            <div class="button">
+                                                <a class="btn btn-default btn-add-cart" href="javascript:void(0)" onclick="AddToCard(590,1)">Mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6 product-resize product-item-box fixheight" style="height: 360px;">
+                                    <div class="product-item">
+                                        <div class="image image-resize" style="height: 199px;">
+                                            <a href="#" title="Vỏ Case Segotep K6">
+                                                <img src="./upload/images/vo-case-segotep-k6-0346-4620106-3b5d1af9533389c54aaeed568ee16644-catalog.jpg" data-original="./upload/images/vo-case-segotep-k6-0346-4620106-3b5d1af9533389c54aaeed568ee16644-catalog.jpg" alt="Vỏ Case Segotep K6" class="img-responsive lazy-img" style="display: inline-block;">
+                                            </a>
+                                            <span class="new">Mới</span>
+                                        </div>
+                                        <div class="right-block">
+                                            <h2 class="name">
+                                                <a href="#" title="Vỏ Case Segotep K6">Vỏ Case Segotep K6</a>
+                                            </h2>
+                                            <div class="rating">
+                                                <div class="rating-1">
+                                                    <span class="rating-img"></span>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="price-new">5.699.000&nbsp;₫</span>
+                                            </div>
+                                            <div class="button">
+                                                <a class="btn btn-default btn-add-cart" href="javascript:void(0)" onclick="AddToCard(589,1)">Mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6 product-resize product-item-box fixheight" style="height: 360px;">
+                                    <div class="product-item">
+                                        <div class="image image-resize" style="height: 199px;">
+                                            <a href="#" title="Vỏ case máy vi tính GAMEMAX Prado">
+                                                <img src="./upload/images/images.jpg" data-original="./upload/images/images.jpg" alt="Vỏ case máy vi tính GAMEMAX Prado" class="img-responsive lazy-img" style="display: inline-block;">
+                                            </a>
+                                            <span class="new">Mới</span>
+                                        </div>
+                                        <div class="right-block">
+                                            <h2 class="name">
+                                                <a href="#" title="Vỏ case máy vi tính GAMEMAX Prado">Vỏ case máy vi tính GAMEMAX Prado</a>
+                                            </h2>
+                                            <div class="rating">
+                                                <div class="rating-1">
+                                                    <span class="rating-img"></span>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="price-new">10.950.000&nbsp;₫</span>
+                                            </div>
+                                            <div class="button">
+                                                <a class="btn btn-default btn-add-cart" href="javascript:void(0)" onclick="AddToCard(587,1)">Mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6 product-resize product-item-box fixheight" style="height: 360px;">
+                                    <div class="product-item">
+                                        <div class="image image-resize" style="height: 199px;">
+                                            <a href="#" title="Vỏ case Xigmatek Taurus 1 Fan Led">
+                                                <img src="./upload/images/vo-case-xigmatek-taurus-h3-160x160.jpg" data-original="./upload/images/vo-case-xigmatek-taurus-h3-160x160.jpg" alt="Vỏ case Xigmatek Taurus 1 Fan Led" class="img-responsive lazy-img" style="display: inline-block;">
+                                            </a>
+                                            <span class="promotion">-30%</span>
+                                        </div>
+                                        <div class="right-block">
+                                            <h2 class="name">
+                                                <a href="#" title="Vỏ case Xigmatek Taurus 1 Fan Led">Vỏ case Xigmatek Taurus 1 Fan Led</a>
+                                            </h2>
+                                            <div class="rating">
+                                                <div class="rating-1">
+                                                    <span class="rating-img"></span>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="price-new">16.730.000&nbsp;₫</span>
+                                                <span class="price-old">23.900.000&nbsp;₫</span>
+                                            </div>
+                                            <div class="button">
+                                                <a class="btn btn-default btn-add-cart" href="javascript:void(0)" onclick="AddToCard(586,1)">Mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6 product-resize product-item-box fixheight" style="height: 360px;">
+                                    <div class="product-item">
+                                        <div class="image image-resize" style="height: 199px;">
+                                            <a href="#" title="Vỏ case SEGOTEP Halo 6 Mini black">
+                                                <img src="./upload/images/images (1).jpg" data-original="./upload/images/images (1).jpg" alt="Vỏ case SEGOTEP Halo 6 Mini black"
+                                                    class="img-responsive lazy-img" style="display: inline-block;">
+                                            </a>
+                                            <span class="promotion">-30%</span>
+                                        </div>
+                                        <div class="right-block">
+                                            <h2 class="name">
+                                                <a href="#" title="Vỏ case SEGOTEP Halo 6 Mini black">Vỏ case SEGOTEP Halo 6 Mini black</a>
+                                            </h2>
+                                            <div class="rating">
+                                                <div class="rating-1">
+                                                    <span class="rating-img"></span>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="price-new">3.850.000&nbsp;₫</span>
+                                                <span class="price-old">5.500.000&nbsp;₫</span>
+                                            </div>
+                                            <div class="button">
+                                                <a class="btn btn-default btn-add-cart" href="javascript:void(0)" onclick="AddToCard(585,1)">Mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6 product-resize product-item-box fixheight" style="height: 360px;">
+                                    <div class="product-item">
+                                        <div class="image image-resize" style="height: 199px;">
+                                            <a href="#" title="Iphone 13 pro-max">
+                                                <img src="./upload/images/13pm-5_0858861ed3c24f7a8c70cb36d1c860b4_compact.png" data-original="./upload/images/13pm-5_0858861ed3c24f7a8c70cb36d1c860b4_compact.png" alt="Iphone 13 pro-max" class="img-responsive lazy-img" style="display: inline-block;">
+                                            </a>
+                                            <span class="promotion">-10%</span>
+                                        </div>
+                                        <div class="right-block">
+                                            <h2 class="name">
+                                                <a href="#" title="Iphone 13 pro-max">Iphone 13 pro-max</a>
+                                            </h2>
+                                            <div class="rating">
+                                                <div class="rating-1">
+                                                    <span class="rating-img"></span>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="price-new">33.990.000&nbsp;₫</span>
+                                            </div>
+                                            <div class="button">
+                                                <a class="btn btn-default btn-add-cart" href="javascript:void(0)" onclick="AddToCard(582,1)">Mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6 product-resize product-item-box fixheight" style="height: 360px;">
+                                    <div class="product-item">
+                                        <div class="image image-resize" style="height: 199px;">
+                                            <a href="#" title="iPhone 12 64GB MGJ93VN/A">
+                                                <img src="./upload/images/iphone_12_mini-_white-1_3137f5a8251e4f32ad2a9450c80836e1_compact.jpg" data-original="./upload/images/iphone_12_mini-_white-1_3137f5a8251e4f32ad2a9450c80836e1_compact.jpg" alt="iPhone 12 64GB MGJ93VN/A" class="img-responsive lazy-img" style="display: inline-block;">
+                                            </a>
+                                            <span class="promotion">-10%</span>
+                                        </div>
+                                        <div class="right-block">
+                                            <h2 class="name">
+                                                <a href="#" title="iPhone 12 64GB MGJ93VN/A">iPhone 12 64GB MGJ93VN/A</a>
+                                            </h2>
+                                            <div class="rating">
+                                                <div class="rating-1">
+                                                    <span class="rating-img">
+                                
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="price-new">21.990.000&nbsp;₫</span>
+                                            </div>
+                                            <div class="button">
+                                                <a class="btn btn-default btn-add-cart" href="javascript:void(0)" onclick="AddToCard(581,1)">Mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6 product-resize product-item-box fixheight" style="height: 360px;">
+                                    <div class="product-item">
+                                        <div class="image image-resize" style="height: 199px;">
+                                            <a href="#" title="SAMSUNG GALAXY S21 5G">
+                                                <img src="./upload/images/samsung-galaxy-s21-trang-600x600-1-200x200_6f0ead713dcc465a9739fd0180d03efe_compact.jpg" data-original="./upload/images/samsung-galaxy-s21-trang-600x600-1-200x200_6f0ead713dcc465a9739fd0180d03efe_compact.jpg" alt="SAMSUNG GALAXY S21 5G" class="img-responsive lazy-img" style="display: inline-block;">
+                                            </a>
+                                            <span class="promotion">-26%</span>
+                                        </div>
+                                        <div class="right-block">
+                                            <h2 class="name">
+                                                <a href="#" title="SAMSUNG GALAXY S21 5G">SAMSUNG GALAXY S21 5G</a>
+                                            </h2>
+                                            <div class="rating">
+                                                <div class="rating-1">
+                                                    <span class="rating-img"></span>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="price-new">15.500.000&nbsp;₫</span>
+                                                <span class="price-old">20.990.000&nbsp;₫</span>
+                                            </div>
+                                            <div class="button">
+                                                <a class="btn btn-default btn-add-cart" href="javascript:void(0)" onclick="AddToCard(579,1)">Mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6 product-resize product-item-box fixheight" style="height: 360px;">
+                                    <div class="product-item">
+                                        <div class="image image-resize" style="height: 199px;">
+                                            <a href="#" title="SAMSUNG GALAXY NODE 10+">
+                                                <img src="./upload/images/galaxy-node-10.jpg" data-original="./upload/images/galaxy-node-10.jpg" alt="SAMSUNG GALAXY NODE 10+" class="img-responsive lazy-img" style="display: inline-block;">
+                                            </a>
+                                            <span class="promotion">-10%</span>
+                                        </div>
+                                        <div class="right-block">
+                                            <h2 class="name">
+                                                <a href="#" title="SAMSUNG GALAXY NODE 10+">SAMSUNG GALAXY NODE 10+</a>
+                                            </h2>
+                                            <div class="rating">
+                                                <div class="rating-1">
+                                                    <span class="rating-img"></span>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="price-new">7.950.000&nbsp;₫</span>
+                                            </div>
+                                            <div class="button">
+                                                <a class="btn btn-default btn-add-cart" href="javascript:void(0)" onclick="AddToCard(578,1)">Mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6 product-resize product-item-box fixheight" style="height: 360px;">
+                                    <div class="product-item">
+                                        <div class="image image-resize" style="height: 199px;">
+                                            <a href="#" title="IPHONE 11 - 64GB - NEW - CHÍNH HÃNG VN/A">
+                                                <img src="./upload/images/iphone11.jpg" data-original="./upload/images/iphone11.jpg" alt="IPHONE 11 - 64GB - NEW - CHÍNH HÃNG VN/A" class="img-responsive lazy-img" style="display: inline-block;">
+                                            </a>
+                                            <span class="hot">Hot</span>
+                                        </div>
+                                        <div class="right-block">
+                                            <h2 class="name">
+                                                <a href="#" title="IPHONE 11 - 64GB - NEW - CHÍNH HÃNG VN/A">IPHONE 11 - 64GB - NEW - CHÍNH HÃNG VN/A</a>
+                                            </h2>
+                                            <div class="rating">
+                                                <div class="rating-1">
+                                                    <span class="rating-img"></span>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="price-new">13.490.000&nbsp;₫</span>
+                                                <span class="price-old">15.690.000&nbsp;₫</span>
+                                            </div>
+                                            <div class="button">
+                                                <a class="btn btn-default btn-add-cart" href="javascript:void(0)" onclick="AddToCard(577,1)">Mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-6 product-resize product-item-box fixheight" style="height: 360px;">
+                                    <div class="product-item">
+                                        <div class="image image-resize" style="height: 199px;">
+                                            <a href="#" title="IMAC 2020 MHK33 21.5-INCH RETINA 4K">
+                                                <img src="./upload/images/imac.jpg" data-original="./upload/images/imac.jpg" alt="IMAC 2020 MHK33 21.5-INCH RETINA 4K" class="img-responsive lazy-img" style="display: inline-block;">
+                                            </a>
+                                            <span class="hot">Hot</span>
+                                        </div>
+                                        <div class="right-block">
+                                            <h2 class="name">
+                                                <a href="#" title="IMAC 2020 MHK33 21.5-INCH RETINA 4K">IMAC 2020 MHK33 21.5-INCH RETINA 4K</a>
+                                            </h2>
+                                            <div class="rating">
+                                                <div class="rating-1">
+                                                    <span class="rating-img"></span>
+                                                </div>
+                                            </div>
+                                            <div class="price">
+                                                <span class="price-new">34.900.000&nbsp;₫</span>
+                                            </div>
+                                            <div class="button">
+                                                <a class="btn btn-default btn-add-cart" href="javascript:void(0)" onclick="AddToCard(576,1)">Mua</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="navigation">
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="#" aria-label="Previous">
+                                            <span aria-hidden="true">«</span>
+                                        </a>
+                                    </li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li>
+                                        <a href="#" aria-label="Next">
+                                            <span aria-hidden="true">»</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <!--Template--
+--End-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-content clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-box col-md-3 col-sm-12 col-xs-12">
+                            <div class="item">
+                                <h3>
+                                    <span>Về chúng tôi</span>
+                                </h3>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="#">Giới thiệu</a>
+                                </li>
+                                <li>
+                                    <a href="#">Giao hàng - Đổi trả</a>
+                                </li>
+                                <li>
+                                    <a href="#">Chính sách bảo mật</a>
+                                </li>
+                                <li>
+                                    <a href="#">Liên hệ</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-box col-md-3 col-sm-12 col-xs-12">
+                            <div class="item">
+                                <h3>
+                                    <span>Trợ giúp</span>
+                                </h3>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="#">Hướng dẫn mua hàng</a>
+                                </li>
+                                <li>
+                                    <a href="#">Hướng dẫn thanh toán</a>
+                                </li>
+                                <li>
+                                    <a href="#">Tài khoản giao dịch</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-box box-address col-md-3 col-sm-12 col-xs-12">
+                            <div class="item">
+                                <h3>
+                                    <span>Thông tin công ty</span>
+                                </h3>
+                                <div class="box-address-content">
+                                    <b>CÔNG TY TNHH PHÁT TRIỂN CÔNG NGHỆ HAH</b>
+                                    <p><i class="fa fa-map-marker"></i> 182 Lê Duẩn, Trường Thi, Thành phố Vinh, Nghệ An</p>
+                                    <p>
+                                        <i class="fa fa-envelope"></i>
+                                        <a href="#">daihocvinh@gmail.com</a>
+                                    </p>
+                                    <p>
+                                        <i class="fa fa-phone"></i> Phone: (0238) 3855452
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-box box-social col-md-3 col-sm-12 col-xs-12">
+                            <div class="item">
+                                <h3>
+                                    <span>Facebook</span>
+                                </h3>
+                                
+                                <div class="social-icon">
+                                    <ul>
+                                        <li><a target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
+                                        <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a target="_blank"><i class="fab fa-youtube"></i></a></li>
+                                        <li><a target="_blank"><i class="fab fa-twitter "></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="backtop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+</body>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop()) {
+                    $('#backtop').fadeIn();
+                } else {
+                    $('#backtop').fadeOut();
+                }
+            });
+            $("#backtop").click(function () {
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+        });
+    </script>
+</html>
